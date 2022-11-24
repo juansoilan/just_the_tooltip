@@ -75,6 +75,7 @@ AxisDirection getAxisDirection({
       final tooltipAbove =
           preferAbove ? fitsAbove || !fitsBelow : !(fitsBelow || !fitsAbove);
 
-      return tooltipAbove ? AxisDirection.up : AxisDirection.down;
+      // always force down
+      return AxisDirection.down;
   }
 }
